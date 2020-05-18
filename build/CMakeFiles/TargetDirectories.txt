@@ -1,0 +1,3 @@
+/home/adsv/Documents/Workspace/Project/SystemMonitor/CppND-System-Monitor/build/CMakeFiles/rebuild_cache.dir
+/home/adsv/Documents/Workspace/Project/SystemMonitor/CppND-System-Monitor/build/CMakeFiles/monitor.dir
+/home/adsv/Documents/Workspace/Project/SystemMonitor/CppND-System-Monitor/build/CMakeFiles/edit_cache.dir
