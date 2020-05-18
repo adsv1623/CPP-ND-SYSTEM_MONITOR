@@ -1,13 +1,22 @@
 #include <string>
 #include "format.h"
-
+#include <iomanip>
 using std::string;
 
+std::string Format::ElapsedTime(long seconds) { 
 
-string Format::ElapsedTime(long seconds) { 
-    int HH=seconds/3600;
-    seconds=seconds%3600;
-    int MM= seconds/60;
-    seconds=seconds%60;
-    int SS= seconds;
-    return std::to_string(HH)+':'+std::to_string(MM)+':'+std::to_string(SS); }
+    const int SECPERMIN =60;
+    const int SECPERHOUR =3600;
+     
+    long lseconds = seconds % SECPERMIN;
+    long lminutes = (seconds / SECPERMIN) %SECPERMIN;
+    long lhours   = seconds /SECPERHOUR; 
+
+    std::stringstream ssresult;
+
+    ssresult << std::setfill('0') << std::setw(2) << lhours << ":";
+    ssresult << std::setfill('0') << std::setw(2) << lminutes << ":";  
+    ssresult << std::setfill('0') << std::setw(2) << lseconds; 
+
+    return ssresult.str();
+}
